@@ -1,5 +1,28 @@
 # Activities
 
+### Activity Type
+
+```javascript
+{
+    channel: Number;
+    type: String;
+    provider: String;
+    providerId: String;
+    createdAt: Date;
+    flagged: Boolean;
+    data: {
+      username: String;
+      tier: String;
+      currency: String;
+      amount: Number
+      message: String;
+      avatar: String;
+      sender: String;
+      gifted: Boolean;
+    }
+  }
+```
+
 ### Activity Types
 
 | Type | Provider |
