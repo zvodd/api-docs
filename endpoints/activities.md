@@ -1,6 +1,6 @@
 # Activities
 
-{% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/activities/{channel}" %}
+{% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/activities/:channel" %}
 {% api-method-summary %}
 Get activities for a channel
 {% endapi-method-summary %}
@@ -25,20 +25,16 @@ Authentication token to track down who is emptying our stocks.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="types" type="string" %}
-**twitch:  
-**'follow',  
-'tip',  
-'host',  
-'raid',  
-'subscriber',  
-'cheer',  
-'redemption'  
-\],  
-**youtube:**  
-'tip'  
-'sponsor'  
-'superchat'  
-'subscriber'
+**Allowed types:  
+- **follow  
+- tip  
+- host  
+- raid  
+- subscriber  
+- cheer  
+- redemption  
+- sponsor  
+- superchat
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -117,7 +113,7 @@ Could not find a cake matching this query.
 
 {% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/activities/{channel}/{activityId}" %}
 {% api-method-summary %}
-Get a specific activity
+
 {% endapi-method-summary %}
 
 {% api-method-description %}
