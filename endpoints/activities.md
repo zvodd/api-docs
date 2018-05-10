@@ -1,5 +1,18 @@
 # Activities
 
+### Activity Types
+
+| Type | Provider |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| follow | Twitch |
+| tip | Twitch & Youtube |
+| host | Twitch |
+| subscriber | Twitch & YouTube |
+| cheer | Twitch |
+| redemption | Twitch |
+| sponsor | YouTube |
+| superchat | YouTube |
+
 {% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/activities/:channel" %}
 {% api-method-summary %}
 Get activities for a channel
@@ -25,16 +38,7 @@ Authorization bearer token
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="types" type="string" %}
-**Allowed types:  
-- **follow  
-- tip  
-- host  
-- raid  
-- subscriber  
-- cheer  
-- redemption  
-- sponsor  
-- superchat
+Types can be added to only return specific types of activities
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
