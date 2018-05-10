@@ -18,8 +18,8 @@ channel ID
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
+{% api-method-parameter name="authorization" required=true %}
+Authorization bearer token
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -111,7 +111,7 @@ Could not find a cake matching this query.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/activities/{channel}/{activityId}" %}
+{% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/activities/:channel/:activityId" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -131,6 +131,12 @@ Activity ID
 channel ID
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="authorization" required=true %}
+Authorization bearer token
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
