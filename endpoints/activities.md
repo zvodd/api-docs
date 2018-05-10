@@ -2,7 +2,7 @@
 
 {% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/activities/{channel}" %}
 {% api-method-summary %}
-Get all activities for a channel
+Get activities for a channel
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -18,10 +18,29 @@ channel ID
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% api-method-parameter name="authentication" type="string" required=true %}
 Authentication token to track down who is emptying our stocks.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="types" type="string" %}
+**twitch:  
+**'follow',  
+'tip',  
+'host',  
+'raid',  
+'subscriber',  
+'cheer',  
+'redemption'  
+\],  
+**youtube:**  
+'tip'  
+'sponsor'  
+'superchat'  
+'subscriber'
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -169,8 +188,12 @@ channel ID
 
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+    "statusCode": 401,
+    "error": "Unauthorized",
+    "message": "No authorization token was found"
+}
 ```
 {% endapi-method-response-example %}
 
