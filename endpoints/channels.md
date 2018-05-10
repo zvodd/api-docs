@@ -1,6 +1,6 @@
 # Channels
 
-{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method method="get" host="" path="/v1/cakes/:id" %}
 {% api-method-summary %}
 Get Cakes
 {% endapi-method-summary %}
