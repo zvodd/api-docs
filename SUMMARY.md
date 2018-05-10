@@ -1,6 +1,6 @@
 # Table of contents
 
-* Initial page
+* [StreamElements API](README.md)
 * [Getting Started](getting-started.md)
 * Scopes
 * [Rate Limiting](rate-limiting.md)
