@@ -15,6 +15,7 @@
 * [Bot](endpoints/bot.md)
 * [Channels](endpoints/channels.md)
 * [Contests](endpoints/contests.md)
+* [Chatstats](endpoints/chatstats.md)
 * Giveaways
 * Overlays
 * [Points](endpoints/points.md)
