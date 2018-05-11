@@ -9,7 +9,11 @@ Socket.io is a real-time publish/subscribe notification system.
 #### Basic example of how to connect
 
 ```javascript
+import io from 'socket.io-client';
+
+// Your StreamElements JWT
 const accessToken = '';
+
 const socket = io('https://realtime.streamelements.com', {
     transports: ['websocket']
 });
