@@ -60,6 +60,26 @@ Authorization bearer token
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
+{% api-method-parameter type="string" name="after" %}
+An ISO8601 date string.
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="before" %}
+An ISO8601 date string
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="username" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="limit" type="number" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="offset" type="number" required=false %}
+Pagination offset
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="types" type="string" %}
 Types can be added to only return specific types of activities
 {% endapi-method-parameter %}
