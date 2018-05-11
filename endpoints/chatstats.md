@@ -1,5 +1,88 @@
 # Chatstats
 
+{% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/chatstats/:username" %}
+{% api-method-summary %}
+Get channel
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="username" type="string" required=true %}
+The channels twitch username
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "username": "stylerdev",
+  "emotes": {
+    "bttvChannelEmotes": {
+      "KKaper": {
+        "name": "KKaper",
+        "_id": "566d3352fb7103f332d79dbe",
+        "type": "bttv",
+        "width": 28,
+        "height": 28,
+        "gif": true
+      },
+      "KKorner": {
+        "name": "KKorner",
+        "_id": "5674bb22bf317838643c7de9",
+        "type": "bttv",
+        "width": 28,
+        "height": 28,
+        "gif": true
+      },
+      "gachiGASM": {
+        "name": "gachiGASM",
+        "_id": "55999813f0db38ef6c7c663e",
+        "type": "bttv",
+        "width": 28,
+        "height": 28,
+        "gif": false
+      },
+      "pajaDank": {
+        "name": "pajaDank",
+        "_id": "568d840001ea6722348ab018",
+        "type": "bttv",
+        "width": 28,
+        "height": 28,
+        "gif": false
+      },
+      "pajaSWA": {
+        "name": "pajaSWA",
+        "_id": "5738dc6ad7a0b60d147270a0",
+        "type": "bttv",
+        "width": 28,
+        "height": 28,
+        "gif": true
+      }
+    },
+    "bttvGlobalEmotes": {}
+  },
+  "lastMessage": "2018-05-09T15:13:38.792784692Z",
+  "settings": {
+    "ignoredChatters": {}
+  }
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 {% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/chatstats/?limit=5" %}
 {% api-method-summary %}
 Get top channels
@@ -134,147 +217,6 @@ Channel username to search for
     "xdaltx",
     "xdamineh"
 ]
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/chatstats/:username" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="username" type="string" required=true %}
-The channels twitch username
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-  "username": "stylerdev",
-  "emotes": {
-    "bttvChannelEmotes": {
-      "KKaper": {
-        "name": "KKaper",
-        "_id": "566d3352fb7103f332d79dbe",
-        "type": "bttv",
-        "width": 28,
-        "height": 28,
-        "gif": true
-      },
-      "KKorner": {
-        "name": "KKorner",
-        "_id": "5674bb22bf317838643c7de9",
-        "type": "bttv",
-        "width": 28,
-        "height": 28,
-        "gif": true
-      },
-      "gachiGASM": {
-        "name": "gachiGASM",
-        "_id": "55999813f0db38ef6c7c663e",
-        "type": "bttv",
-        "width": 28,
-        "height": 28,
-        "gif": false
-      },
-      "pajaDank": {
-        "name": "pajaDank",
-        "_id": "568d840001ea6722348ab018",
-        "type": "bttv",
-        "width": 28,
-        "height": 28,
-        "gif": false
-      },
-      "pajaSWA": {
-        "name": "pajaSWA",
-        "_id": "5738dc6ad7a0b60d147270a0",
-        "type": "bttv",
-        "width": 28,
-        "height": 28,
-        "gif": true
-      }
-    },
-    "bttvGlobalEmotes": {}
-  },
-  "lastMessage": "2018-05-09T15:13:38.792784692Z",
-  "settings": {
-    "ignoredChatters": {}
-  }
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/chatstats/:username/epm" %}
-{% api-method-summary %}
-Get channel EPM
-{% endapi-method-summary %}
-
-{% api-method-description %}
-Returns a list of the emotes with the highest usage in the last minute.
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="username" type="string" required=true %}
-The channels twitch username
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="limit" type="integer" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-[
-  {
-    "id": "898500",
-    "emote": "gvdLOVE",
-    "provider": "twitch",
-    "epm": 0
-  },
-  {
-    "id": "88",
-    "emote": "PogChamp",
-    "provider": "twitch",
-    "epm": 0
-  },
-  {
-    "id": "390795",
-    "emote": "elementsS",
-    "provider": "twitch",
-    "epm": 0
-  }
-]
-
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -442,6 +384,64 @@ The channels twitch username
     { "id": "28", "emote": "MrDestructoid", "amount": 56 }
   ]
 }
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/chatstats/:username/epm" %}
+{% api-method-summary %}
+Get channel EPM
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Returns a list of the emotes with the highest usage in the last minute.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="username" type="string" required=true %}
+The channels twitch username
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="limit" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+[
+  {
+    "id": "898500",
+    "emote": "gvdLOVE",
+    "provider": "twitch",
+    "epm": 0
+  },
+  {
+    "id": "88",
+    "emote": "PogChamp",
+    "provider": "twitch",
+    "epm": 0
+  },
+  {
+    "id": "390795",
+    "emote": "elementsS",
+    "provider": "twitch",
+    "epm": 0
+  }
+]
 
 ```
 {% endapi-method-response-example %}
