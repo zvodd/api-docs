@@ -30,8 +30,19 @@ JWT Bearer token
 
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+    "bot": {
+        "enabled": true,
+        "name": "streamelements",
+        "joined": true,
+        "muted": false,
+        "mod": true,
+        "allowCustomName": true,
+        "logs": [],
+        "channel": "577c0455f9a31ea72a36b2b3"
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
