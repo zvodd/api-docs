@@ -140,7 +140,7 @@ Could not find a cake matching this query.
 
 {% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/activities/:channel/:activityId" %}
 {% api-method-summary %}
-
+Get a single activity for a channel
 {% endapi-method-summary %}
 
 {% api-method-description %}
