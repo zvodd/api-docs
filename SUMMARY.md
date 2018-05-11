@@ -11,7 +11,7 @@
 ## Endpoints
 
 * [Activities](endpoints/activities.md)
-* [Bot](endpoints/bot.md)
+* Bot
 * [Channels](endpoints/channels.md)
 * [Contests](endpoints/contests.md)
 * Giveaways
