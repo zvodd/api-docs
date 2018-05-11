@@ -2,7 +2,8 @@
 
 * [StreamElements API](README.md)
 * [Getting Started](getting-started.md)
-* Scopes
+* OAuth2
+  * Scopes
 * [Rate Limiting](rate-limiting.md)
 * Pagination
 * [Websockets](websockets.md)
@@ -19,7 +20,6 @@
 * [Points](endpoints/points.md)
 * [Sessions](endpoints/sessions.md)
 * [Songrequest](endpoints/songrequest.md)
-* Speech
 * Stats
 * Store
 * Streams
