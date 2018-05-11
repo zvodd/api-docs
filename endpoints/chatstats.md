@@ -6,7 +6,7 @@ Get channel
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Get settings for a chatstats channel.
 {% endapi-method-description %}
 
 {% api-method-spec %}
