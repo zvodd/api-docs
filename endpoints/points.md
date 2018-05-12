@@ -6,7 +6,7 @@ Bulk update points
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint can be used to update many users points in one call.
+Bulk update many users points across multiple leaderboards.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -18,7 +18,7 @@ The channel Id
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="users" type="array" required=false %}
+{% api-method-parameter name="users" type="array" required=true %}
  Allow fields:  
 `username`The username of the user.  
 `current` The amount of points.  
@@ -34,6 +34,38 @@ The channel Id
 **`add`** Will add points to an existing. 
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="put" host="https://api.streamelements.com" path="/kappa/v2/points/:channel/:user/:amount" %}
+{% api-method-summary %}
+Update a users points
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Adds or removes points from a user in the current leaderboard.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
