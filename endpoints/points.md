@@ -1,23 +1,52 @@
 # Points
 
-## Getting Super Powers
+{% api-method method="put" host="https://api.streamelements.com" path="/kappa/v2/points/:channel" %}
+{% api-method-summary %}
+Bulk update points
+{% endapi-method-summary %}
 
-Becoming a super hero is a fairly straight forward process:
+{% api-method-description %}
+This endpoint can be used to update many users points in one call.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="channel" type="string" required=true %}
+The channel Id
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="users" type="array" required=false %}
+ Allow fields:  
+`username`The username of the user.  
+`current` The amount of points.  
+`alltime` The alltime amount of points. \(optional\)  
+`twitchId` The users twitchId. \(optional\)  
+`timeOnline` Time in minutes. \(optional\)  
+`timeOffline` Time in minutes. \(optional\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="mode" type="string" required=true %}
+  
+**`set`** Will overwrite the users points if found.  
+**`add`** Will add points to an existing. 
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
 
 ```
-$ give me super-powers
-```
-
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
-
-Once you're strong enough, save the world:
 
 ```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-
-
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
