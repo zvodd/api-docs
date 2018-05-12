@@ -56,14 +56,24 @@ Update a users points
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Adds or removes points from a user in the current leaderboard.
+Adds or removes points from a user in the current leaderboard.  
+  
+channel
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="channel" type="string" required=true %}
+The channel Id
+{% endapi-method-parameter %}
 
+{% api-method-parameter name="user" type="string" required=true %}
+The target user
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="amount" type="integer" required=true %}
+The amount of points.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
