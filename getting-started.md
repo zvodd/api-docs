@@ -1,3 +1,7 @@
+---
+description: This page will help you getting started with the StreamElements API.
+---
+
 # Getting Started
 
 ## Getting Super Powers
