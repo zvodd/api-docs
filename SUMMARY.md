@@ -1,10 +1,10 @@
 # Table of contents
 
 * [StreamElements API](README.md)
-* [Getting Started](getting-started/README.md)
-  * Authentication
+* [Getting Started](getting-started.md)
 * OAuth2
   * Scopes
+* Authentication
 * [Rate Limiting](rate-limiting.md)
 * Pagination
 * [Websockets](websockets.md)
