@@ -1,7 +1,8 @@
 # Table of contents
 
 * [StreamElements API](README.md)
-* [Getting Started](getting-started.md)
+* [Getting Started](getting-started/README.md)
+  * Authentication
 * OAuth2
   * Scopes
 * [Rate Limiting](rate-limiting.md)
