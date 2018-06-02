@@ -1,5 +1,18 @@
 # Activities
 
+### Activity Types
+
+| **Type** | **Provider** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| follow | Twitch |
+| tip | Twitch & Youtube |
+| host | Twitch |
+| subscriber | Twitch & YouTube |
+| cheer | Twitch |
+| redemption | Twitch |
+| sponsor | YouTube |
+| superchat | YouTube |
+
 ### Activity Type
 
 ```javascript
@@ -23,19 +36,6 @@
   }
 ```
 
-### Activity Types
-
-| Type | Provider |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| follow | Twitch |
-| tip | Twitch & Youtube |
-| host | Twitch |
-| subscriber | Twitch & YouTube |
-| cheer | Twitch |
-| redemption | Twitch |
-| sponsor | YouTube |
-| superchat | YouTube |
-
 {% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/activities/:channel" %}
 {% api-method-summary %}
 Get activities for a channel
@@ -49,7 +49,7 @@ This endpoint retrieves the activities for a channel.
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="channel" type="string" required=true %}
-channel ID
+account/channel ID
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -69,11 +69,11 @@ An ISO8601 date string
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="username" type="string" required=false %}
-
+Search activities for a specific username
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="number" required=false %}
-
+Limit the number of activities to return \(default 100 when no limit is specified\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="offset" type="number" required=false %}
@@ -170,12 +170,12 @@ This endpoint retrieves a single activity for a channel.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="activityId" type="string" required=true %}
-Activity ID
+{% api-method-parameter name="channel" type="string" required=true %}
+account/channel ID
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="channel" type="string" required=true %}
-channel ID
+{% api-method-parameter name="activityId" type="string" required=true %}
+activity ID
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -271,4 +271,118 @@ Authorization bearer token
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% api-method method="post" host="https://api.streamelements.com" path="/kappa/v2/activities/:channel/:activityId/replay" %}
+{% api-method-summary %}
+Replay an activity
+{% endapi-method-summary %}
+
+{% api-method-description %}
+This endpoint will replay the alert for an activity.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="channel" type="string" required=true %}
+account/channel ID
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="activityId" type="string" required=true %}
+activity ID
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+Authorization bearer token
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{"success":true}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=304 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=500 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=503 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
 

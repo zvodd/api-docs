@@ -2,7 +2,7 @@
 
 {% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/bot/:channel" %}
 {% api-method-summary %}
-Get bot
+Get bot status
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -13,13 +13,13 @@ Retrieve basic information about the bot status.
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="channel" type="string" required=true %}
-Channel Id
+account/channel ID
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="authorization" type="string" required=true %}
-JWT Bearer token
+authorization bearer token
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -62,7 +62,7 @@ Make the bot join your channel.
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="channel" type="string" required=true %}
-Channel id
+account/channel ID
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -194,6 +194,126 @@ Channel id
 {% endapi-method-response-example-description %}
 
 ```text
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+## Modules
+
+{% api-method method="get" host="https://api.streamelements.com" path="/kappa/v2/bot/modules/:channel" %}
+{% api-method-summary %}
+Get bot module settings
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Retrieve the bot module settings
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="channel" type="string" required=true %}
+account/channel ID
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+authorization bearer token
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=302 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=304 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=500 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=503 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
 
 ```
 {% endapi-method-response-example %}
